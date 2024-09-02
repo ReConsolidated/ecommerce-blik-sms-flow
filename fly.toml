@@ -1,0 +1,26 @@
+app = "sms-flow"
+primary_region = "waw"
+
+[build]
+
+[env]
+SPRING_DATASOURCE_PASSWORD = "compose-postgres"
+SPRING_DATASOURCE_URL = "jdbc:postgresql://aws-0-eu-central-1.pooler.supabase.com:5432/sms-flow"
+SPRING_DATASOURCE_USERNAME = "postgres.ruexpbcygjdotksrkzbn"
+swap_size_mb = "512"
+
+[http_service]
+internal_port = 8080
+auto_stop_machines = true
+auto_start_machines = false
+min_machines_running = 0
+processes = ["app"]
+[concurrency]
+type = "connections"
+hard_limit = 1000
+soft_limit = 1000
+
+[[vm]]
+cpu_kind = "shared"
+cpus = 1
+memory_mb = 512
