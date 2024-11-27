@@ -1,4 +1,4 @@
-package io.github.reconsolidated.smsflow;
+package io.github.reconsolidated.smsflow.application.sms;
 
 import io.netty.channel.ChannelOption;
 import io.netty.handler.timeout.ReadTimeoutHandler;

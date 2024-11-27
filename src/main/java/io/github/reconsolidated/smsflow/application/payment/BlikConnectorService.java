@@ -1,5 +1,8 @@
-package io.github.reconsolidated.smsflow;
+package io.github.reconsolidated.smsflow.application.payment;
 
+import io.github.reconsolidated.smsflow.application.sms.SmsService;
+import io.github.reconsolidated.smsflow.application.checkout.AbandonedCheckoutService;
+import io.github.reconsolidated.smsflow.domain.checkout.AbandonedCheckout;
 import io.netty.channel.ChannelOption;
 import io.netty.handler.timeout.ReadTimeoutHandler;
 import io.netty.handler.timeout.WriteTimeoutHandler;

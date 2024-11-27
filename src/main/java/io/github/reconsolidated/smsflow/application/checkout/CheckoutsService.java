@@ -1,18 +1,18 @@
-package io.github.reconsolidated.smsflow;
+package io.github.reconsolidated.smsflow.application.checkout;
 
+import io.github.reconsolidated.smsflow.application.payment.BlikConnectorService;
+import io.github.reconsolidated.smsflow.application.notification.EmailService;
+import io.github.reconsolidated.smsflow.application.sms.SmsService;
+import io.github.reconsolidated.smsflow.domain.checkout.AbandonedCheckout;
+import io.github.reconsolidated.smsflow.domain.checkout.AbandonedCheckoutRepository;
 import io.netty.channel.ChannelOption;
 import io.netty.handler.timeout.ReadTimeoutHandler;
 import io.netty.handler.timeout.WriteTimeoutHandler;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.MediaType;
 import org.springframework.http.client.reactive.ReactorClientHttpConnector;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
-import org.springframework.util.LinkedMultiValueMap;
-import org.springframework.util.MultiValueMap;
-import org.springframework.web.reactive.function.BodyInserters;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.netty.http.client.HttpClient;
 

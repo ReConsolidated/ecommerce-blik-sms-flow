@@ -1,4 +1,4 @@
-package io.github.reconsolidated.smsflow;
+package io.github.reconsolidated.smsflow.application.notification;
 
 import jakarta.mail.MessagingException;
 import jakarta.mail.internet.MimeMessage;

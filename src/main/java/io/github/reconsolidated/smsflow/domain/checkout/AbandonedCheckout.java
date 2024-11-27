@@ -1,4 +1,4 @@
-package io.github.reconsolidated.smsflow;
+package io.github.reconsolidated.smsflow.domain.checkout;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;

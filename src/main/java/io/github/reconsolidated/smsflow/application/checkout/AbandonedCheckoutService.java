@@ -1,5 +1,7 @@
-package io.github.reconsolidated.smsflow;
+package io.github.reconsolidated.smsflow.application.checkout;
 
+import io.github.reconsolidated.smsflow.domain.checkout.AbandonedCheckout;
+import io.github.reconsolidated.smsflow.domain.checkout.AbandonedCheckoutRepository;
 import org.springframework.stereotype.Service;
 
 @Service
