@@ -2,7 +2,7 @@ spring:
   application:
     name: sms-flow
   datasource:
-    password: "docker"
+    password: ${SPRING_DATASOURCE_PASSWORD}
     url: "jdbc:postgresql://aws-0-eu-central-1.pooler.supabase.com:5432/postgres"
     username: "postgres.ruexpbcygjdotksrkzbn"
   jpa:
@@ -16,8 +16,8 @@ spring:
   mail:
     host: "pro3.mail.ovh.net"
     port: 587
-    username: "kontakt@tempowaiter.pl"
-    password: "kWy681@t"
+    username: ${SPRING_MAIL_USERNAME}
+    password: ${SPRING_MAIL_PASSWORD}
     test-connection: true
     properties:
       mail:
@@ -29,12 +29,12 @@ spring:
 
 apiKeys:
   tpaySandbox:
-    clientId: "01HZ25YZ3TQS3D322DEXK047V3-01HZ2628AYDGGVG02R6Z8SRA8N"
-    secret: "ee731d7384efba4c6f5b531940abef1d5d1e0225c7af70847d3c994c60a0a33b"
+    clientId: ${TPAY_SANDBOX_CLIENT_ID}
+    secret: ${TPAY_SANDBOX_SECRET}
   tpay-prod:
-    clientId: "01J00HYVAP53RTHXGYWTX9SZTR-01J03AKNB1348WM02F96ATEPQT"
-    secret: "4839902a29a85c34c4bd3552cb3995d9dd84f69f1d52f4641fd322ddba6c7334"
+    clientId: ${TPAY_PROD_CLIENT_ID}
+    secret: ${TPAY_PROD_SECRET}
   smsPlanet:
-    secret: "tVmSO65Wdfeca35eed8c4127a2633fc00e9715df"
+    secret: ${SMS_PLANET_SECRET}
   shopify:
-    access: "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"
+    access: ${SHOPIFY_ACCESS_CODE}
